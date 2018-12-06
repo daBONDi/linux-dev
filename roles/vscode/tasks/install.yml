@@ -1,0 +1,26 @@
+- name: "vscode: ensure required packages for vscode"
+  apt:
+    name:
+        - ca-certificates
+        - apt-transport-https
+        - gconf2
+        - libasound2
+        - libgtk2.0-0
+        - libxss1
+    state: present
+
+- name: "vscode: Ensure apt key from microsoft"
+  apt_key:
+    url: 'https://packages.microsoft.com/keys/microsoft.asc'
+    state: present
+
+- name: "vscode: ensure vscode package is repository is registered"
+  apt_repository:
+    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+    filename: vscode
+    state: present
+
+- name: "vscode: ensure vscode is installed"
+  apt:
+    name: code
+    state: present

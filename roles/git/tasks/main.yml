@@ -1,0 +1,9 @@
+- name: "git: ensure package"
+  apt:
+    name: git-core
+
+- name: "git: ensure user config"
+  become_user: "{{ default_user }}"
+  template:
+    src: files/git.config.j2
+    dest: "{{ lookup('env','HOME') }}/.gitconfig"

@@ -1,0 +1,17 @@
+- name: "Prepare my Linux Dev Machine"
+  hosts: localhost
+  become: yes
+  roles:
+    # - role: basic
+    
+    # - role: python
+
+    # - role: git
+    #   vars:
+    #     git_user_name: "{{ git_config.user }}"
+    #     git_user_email: "{{ git_config.email }}"
+
+    - role: gitkraken
+      
+
+    # - role: vscode

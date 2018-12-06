@@ -1,0 +1,7 @@
+- include_tasks: install.yml
+
+- name: "vscode: install required extensions"
+  become_user: "{{ default_user }}"
+  vscode_install_extension:
+    name: "{{ item }}"
+  with_items: "{{ vscode_extensions }}"

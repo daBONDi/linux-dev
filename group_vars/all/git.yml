@@ -1,0 +1,4 @@
+# Default Configuration for git client
+git_config:
+  user: "daBONDi"
+  email: "david@tsb.at"

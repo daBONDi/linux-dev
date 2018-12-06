@@ -1,0 +1,10 @@
+# Install Basic Python environment and utilitys
+- name: "basic-python: ensure required packages for python development"
+  apt:
+    name:
+      - python-pip
+
+- name: "basic-python-pip: ensure required default pip packages"
+  pip:
+    name:
+      - pylint

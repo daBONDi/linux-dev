@@ -1,0 +1,9 @@
+
+- name: "gitkraken: install dependencies"
+  apt:
+    name: 
+      - libgnome-keyring-common 
+      - libgnome-keyring-dev
+- name: "gitkraken: install deb package from gitkraken homepage"
+  apt:
+    deb: "https://release.gitkraken.com/linux/gitkraken-amd64.deb"

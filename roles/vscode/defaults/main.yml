@@ -1,0 +1,4 @@
+vscode_extensions:
+  - vscoss.vscode-ansible
+  - robertohuertasm.vscode-icons
+  - ms-python.python

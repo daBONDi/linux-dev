@@ -1,0 +1,10 @@
+# Install Basic Packages# Install Basic Requirements Packages
+
+- name: "basic: update apt cache"
+  apt:
+    update_cache: yes
+
+- name: "basic: install packages"
+  apt:
+    name:
+      - software-properties-common
