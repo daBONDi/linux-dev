@@ -8,3 +8,5 @@
   apt:
     name:
       - software-properties-common
+
+- include_tasks: ubuntu_desktop.yml

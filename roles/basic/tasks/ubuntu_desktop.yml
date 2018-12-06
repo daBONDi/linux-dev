@@ -1,0 +1,6 @@
+# customize ubuntu desktop
+- name: "basic-ubuntu_desktop: remove ubuntu-web-launchers"
+  apt:
+    name: ubuntu-web-launchers
+    state: absent
+    purge: yes
