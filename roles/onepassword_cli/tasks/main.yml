@@ -1,0 +1,7 @@
+- name: "onepassword_cli: download and unarchive into /usr/local/bin"
+  unarchive:
+    src: "https://cache.agilebits.com/dist/1P/op/pkg/v0.5.4/op_linux_amd64_v0.5.4.zip"
+    dest: "/usr/local/bin"
+    remote_src: yes
+    creates: "/usr/local/bin/op/op"
+
